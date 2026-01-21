@@ -1,5 +1,7 @@
 function stringChop(str, size) {
-  size = Number(size);          // convert size to number
+  if (str === null) return [];   // ✅ handle null input
+
+  size = Number(size);
   let chunks = [];
 
   for (let i = 0; i < str.length; i += size) {
